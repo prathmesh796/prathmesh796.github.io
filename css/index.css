@@ -41,7 +41,7 @@ ul {
 .ul-list a li {
   padding: 0.5rem 1rem;
   transition: background-color 0.2s, color 0.2s;
-  border-radius: 4px;
+  border-radius: 10px;
 }
 
 .ul-list a li:hover {
@@ -52,7 +52,7 @@ ul {
 
 /* Main Layout */
 .main-content {
-  height: 80vh; /* Full screen height */
+  height: 75vh; /* Full screen height */
   display: flex;
   justify-content: flex-start; /* Align content to left */
   align-items: flex-end; /* Align content to bottom */
@@ -61,13 +61,39 @@ ul {
 }
 
 .section {
-  max-width: 600px;
+  max-width: 800px;
   /* background-color: #ffffff; */
   padding: 1.5rem;
   /* border-radius: 10px; */
   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
 }
 
+.section h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.section p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-span {
+  color: #f0c078;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.work-span {
+  color: #c081e3;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
 
 .profile-image {
   width: 100%;
@@ -76,53 +102,11 @@ ul {
   margin-bottom: 1rem;
 }
 
-.left-section hr {
-  margin: 1.5rem 0;
-}
-
-.left-section div a {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-size: 0.9rem;
-  color: #0073e6;
-}
-
-.left-section img {
-  width: 24px;
-  height: 24px;
-  vertical-align: middle;
-  margin-right: 5px;
-}
-
-/* Right Section */
-.right-section h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: #222;
-}
-
-.right-section p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-}
-
-.right-section h3 {
-  margin-bottom: 0.5rem;
-}
-
-.right-section ul {
-  padding-left: 1.5rem;
-}
-
-.right-section ul li {
-  margin-bottom: 0.5rem;
-}
-
 /* Footer */
 .footer {
   text-align: center;
   padding: 1.5rem;
-  margin-top: 2rem;
+  margin-top: 5rem;
   /* background-color: #fafafa; */
   font-size: 0.9rem;
   color: #666;
@@ -131,8 +115,9 @@ ul {
 .social-links {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 40px;
   margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 /* Responsive */
