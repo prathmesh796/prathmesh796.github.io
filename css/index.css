@@ -23,8 +23,8 @@ ul {
 
 /* Header and Navbar */
 .header {
-  /* background-color: #ffffff; */
   padding: 1rem 2rem;
+  margin-right: 10rem;
 }
 
 .navbar {
@@ -62,10 +62,7 @@ ul {
 
 .section {
   max-width: 800px;
-  /* background-color: #ffffff; */
   padding: 1.5rem;
-  /* border-radius: 10px; */
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
 }
 
 .section h1 {
@@ -107,7 +104,6 @@ ul {
   text-align: center;
   padding: 1.5rem;
   margin-top: 5rem;
-  /* background-color: #fafafa; */
   font-size: 0.9rem;
   color: #666;
 }
