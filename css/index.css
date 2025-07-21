@@ -116,6 +116,11 @@ ul {
   margin-bottom: 1rem;
 }
 
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .main-content {

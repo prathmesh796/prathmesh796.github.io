@@ -17,17 +17,15 @@
     margin-bottom: 20px;
     width: 100%;
     height: 2px;
-    background-color: lightgray;
+    background-color: rgb(231, 231, 231);
 }
 
 .projects-article {
     width: full;
-    margin: 0 auto;
     padding: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    gap: 20px;
+    grid-gap: 20px;
 }
 
 .projects-figure {
@@ -35,13 +33,27 @@
     text-align: center;
     width: 100%;
     border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .projects-caption {
     margin-top: 10px;
+}
+
+.projects-caption h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-align: left;
+    padding-left: 25px;
+}
+
+.projects-caption p {
+    font-size: 1rem;
+    color: #555;
+    padding-left: 25px;
+    text-align: left;
 }
 
 .projects-header {
@@ -51,14 +63,22 @@
 }
 
 .projects-image {
-    height: 200px;
-    width: 300px;
+    height: 70%;
+    width: 100%;
     border-radius: 10px;
 }
 
-.projects-links {
+.project-links {
     width: 100%;
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
+    margin-bottom: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.project-links a {
+    text-decoration: none;
+    color: #007bff;
 }
