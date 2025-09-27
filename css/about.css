@@ -83,3 +83,8 @@
     text-decoration: none;
     color: #007bff;
 }
+
+.highlight {
+    font-size: x-large;
+    font-weight: bold;
+}
