@@ -119,7 +119,7 @@ ul {
   padding: 1.5rem;
   margin-top: 5rem;
   font-size: 0.9rem;
-  color: #666;
+  color: inherit;
 }
 
 .social-links {
@@ -128,11 +128,16 @@ ul {
   gap: 40px;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  color: inherit;
 }
 
 .github-button {
   margin-left: 20px;
   margin-right: 20px;
+  margin-top: 8px;
+}
+
+.dark-mode-icon {
   margin-top: 8px;
 }
 
