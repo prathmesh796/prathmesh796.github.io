@@ -68,6 +68,11 @@
     font-size: 1rem;
 }
 
+body:has(#dark:target) .skills-list li {
+    background-color: #484848;
+    color: white;
+}
+
 .about-links {
     display: contents;
     gap: 10px;
@@ -98,4 +103,8 @@
 .highlight {
     font-size: x-large;
     font-weight: bold;
+}
+
+body:has(#dark:target) .highlight-text {
+    color: black;
 }

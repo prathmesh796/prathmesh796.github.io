@@ -55,13 +55,19 @@ ul {
 
 .ul-list a li {
   padding: 0.5rem 1rem;
-  transition: background-color 0.2s, color 0.2s;
+  transition: background-color 0.4s, color 0.4s;
   border-radius: 10px;
 }
 
 .ul-list a li:hover {
   background-color: #e0e0e0;
   color: #000;
+  cursor: pointer;
+}
+
+body:has(#dark:target) li:hover {
+  background-color: #484848;
+  color: white;
   cursor: pointer;
 }
 
@@ -139,7 +145,7 @@ ul {
 }
 
 .dark-mode-icon {
-  margin-top: 8px;
+  margin-top: 4px;
 }
 
 /* Theme persistence via URL hash */
