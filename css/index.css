@@ -19,7 +19,8 @@ body {
   line-height: 1.6;
 }
 
-body:has(#dark-mode-toggle:checked) {
+body:has(#dark-mode-toggle:checked),
+body:has(#dark:target) {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--background-color-dark);
   color: var(--text-color-dark);
@@ -139,6 +140,29 @@ ul {
 
 .dark-mode-icon {
   margin-top: 8px;
+}
+
+/* Theme persistence via URL hash */
+.nav-dark {
+  display: none;
+}
+
+body:has(#dark:target) .nav-dark {
+  display: flex;
+}
+
+body:has(#dark:target) .nav-light {
+  display: none;
+}
+
+/* In light mode explicitly hide any dark controls (defensive) */
+body:not(:has(#dark:target)) .nav-dark {
+  display: none !important;
+}
+
+.theme-toggle-link {
+  display: inline-flex;
+  align-items: center;
 }
 
 /* Responsive */

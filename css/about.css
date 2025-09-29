@@ -84,6 +84,17 @@
     color: #007bff;
 }
 
+.resume-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 20px;
+    background-color: #6fceeb;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
 .highlight {
     font-size: x-large;
     font-weight: bold;
