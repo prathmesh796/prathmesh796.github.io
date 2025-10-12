@@ -34,10 +34,10 @@
     text-align: center;
     width: 100%;
     height: fit-content;
-    border: 1px solid #ccc;
+    border: solid rgb(187, 187, 187) 1px;
     border-radius: 12px;
     margin: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .projects-caption {
@@ -53,7 +53,7 @@
 
 .projects-caption p {
     font-size: 1rem;
-    color: #555;
+    opacity: 0.8;
     padding-left: 25px;
     text-align: left;
 }
@@ -82,5 +82,5 @@
 
 .project-links a {
     text-decoration: none;
-    color: black;
+    color: inherit;
 }
