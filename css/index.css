@@ -145,7 +145,7 @@ body:has(#dark:target) li:hover {
 }
 
 .dark-mode-icon {
-  margin-top: 4px;
+  margin-top: 0px;
 }
 
 /* Theme persistence via URL hash */
