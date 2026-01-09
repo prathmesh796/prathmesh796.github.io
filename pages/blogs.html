@@ -4,11 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // Prevent white flash in dark mode - must run before any rendering
+        if (window.location.hash === '#dark') {
+            document.write('<style>html,body{background-color:#121212!important;color:#e0e0e0!important}</style>');
+        }
+    </script>
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/blogs.css">
     <link rel="icon" type="image/x-icon" href="/img/paws.png">
     <title>Prathmesh Salunkhe - Blogs</title>
-    <script src="../js/blogs.js"></script>
+    <script src="../js/script.js"></script>
 </head>
 
 <body>

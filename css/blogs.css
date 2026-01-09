@@ -98,7 +98,7 @@ body:has(#dark:target) .category-btn.active {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    overflow: auto;
+    overflow: hidden;
     padding-right: 20px;
     padding-top: 2px;
 }

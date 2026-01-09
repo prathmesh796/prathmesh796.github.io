@@ -4,11 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // Prevent white flash in dark mode - must run before any rendering
+        if (window.location.hash === '#dark') {
+            document.write('<style>html,body{background-color:#121212!important;color:#e0e0e0!important}</style>');
+        }
+    </script>
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/projects.css">
     <link rel="icon" type="image/x-icon" href="/img/paws.png">
     <title>Prathmesh Salunkhe - Projects</title>
-    <script src="../js/projects.js"></script>
+    <script src="../js/script.js"></script>
 </head>
 
 <body>
@@ -81,21 +87,28 @@
         </section>
 
         <article class="projects-article">
-            <figure class="projects-figure">
-                <img src="/img/chatbot-portfolio-banner.png" alt="Project Title" width="300" height="200"
-                    class="projects-image">
-                <figcaption class="projects-caption">
-                    <h2>Chess Agent</h2>
-                    <p>A chess agent is reinforcement learning agent which can play chess against a human or another
-                        agent.</p>
+            <aside class="projects-aside">
+                <ul class="category-list">
+                    <li><button class="category-btn active" data-category="main">Main Projects</button></li>
+                    <li><button class="category-btn" data-category="side">Side Projects</button></li>
+                    <li><button class="category-btn" data-category="paper">Paper Implementations</button></li>
+                </ul>
+            </aside>
+
+            <div class="projects-container">
+                <figure class="projects-figure" data-category="main">
+                    <figcaption class="projects-caption">
+                        <h2>Deepmate</h2>
+                        <p>A reinforcement learning agent which can play chess against a human.</p>
+                    </figcaption>
 
                     <div class="project-links">
-                        <a href="" target="_blank">
-                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        <a href="" target="_blank" class="deployment-links-disabled">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                                 class="bi bi-globe-asia-australia-fill" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd"
                                     d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0m3.041 9a1 1 0 0 0-.946.674l-.172.499a1 1 0 0 1-.403.515l-.803.517a1 1 0 0 0-.458.84v.455a1 1 0 0 0 1 1h.257c.192 0 .38.055.542.16l.762.491a1 1 0 0 0 .282.123A7 7 0 0 0 14.82 9.57a1 1 0 0 0-.085-.061l-.315-.204a1 1 0 0 0-.977-.06l-.169.082a1 1 0 0 1-.742.051l-1.02-.33A1 1 0 0 0 11.205 9zm-5.832 2.655a.302.302 0 1 0-.298.52l.762.325.48.232A.386.386 0 1 0 6.321 12h-.417a.7.7 0 0 1-.418-.139zM8 1a7 7 0 0 0-6.387 9.864l.754-1.285a1 1 0 0 1 1.546-.225l1.074 1.005a.986.986 0 0 0 1.36-.011l.038-.037a.88.88 0 0 0 .26-.754c-.075-.549.37-1.035.92-1.1.728-.086 1.587-.324 1.728-.957.086-.386-.115-.83-.361-1.2-.208-.312 0-.8.374-.8.122 0 .24-.055.318-.15l.393-.474c.196-.237.49-.368.797-.403.554-.065 1.407-.277 1.582-.973.185-.731-.986-.944-.998-1.62A7 7 0 0 0 8 1m.524 8.963a.413.413 0 1 0-.783-.183v.028a.46.46 0 0 1-.137.326l-.113.107a.36.36 0 0 0 .5.518l.193-.187a.6.6 0 0 0 .12-.166zm3.374-4.444c-.252-.244-.681-.139-.931.107-.256.251-.578.406-.918.585-.338.177-.264.625.101.735a.48.48 0 0 0 .345-.027l1.278-.617a.484.484 0 0 0 .125-.783" />
-                            </svg> -->
+                            </svg>
                         </a>
                         <a href="https://github.com/prathmesh796/chess-agent" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
@@ -105,15 +118,57 @@
                             </svg>
                         </a>
                     </div>
-                </figcaption>
-            </figure>
+                </figure>
 
-            <figure class="projects-figure">
-                <img src="/img/chessmate-portfolio-banner.png" alt="Project Title" width="300" height="200"
-                    class="projects-image">
-                <figcaption class="projects-caption">
-                    <h2>chessmate</h2>
-                    <p>A platform for analyzing and learning your chess games played on chess.com.</p>
+                <figure class="projects-figure" data-category="side">
+                    <figcaption class="projects-caption">
+                        <h2>Disggle</h2>
+                        <p>A Discord presence app for kaggle.</p>
+                    </figcaption>
+
+                    <div class="project-links">
+                        <a href="" target="_blank" class="deployment-links-disabled">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-globe-asia-australia-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0m3.041 9a1 1 0 0 0-.946.674l-.172.499a1 1 0 0 1-.403.515l-.803.517a1 1 0 0 0-.458.84v.455a1 1 0 0 0 1 1h.257c.192 0 .38.055.542.16l.762.491a1 1 0 0 0 .282.123A7 7 0 0 0 14.82 9.57a1 1 0 0 0-.085-.061l-.315-.204a1 1 0 0 0-.977-.06l-.169.082a1 1 0 0 1-.742.051l-1.02-.33A1 1 0 0 0 11.205 9zm-5.832 2.655a.302.302 0 1 0-.298.52l.762.325.48.232A.386.386 0 1 0 6.321 12h-.417a.7.7 0 0 1-.418-.139zM8 1a7 7 0 0 0-6.387 9.864l.754-1.285a1 1 0 0 1 1.546-.225l1.074 1.005a.986.986 0 0 0 1.36-.011l.038-.037a.88.88 0 0 0 .26-.754c-.075-.549.37-1.035.92-1.1.728-.086 1.587-.324 1.728-.957.086-.386-.115-.83-.361-1.2-.208-.312 0-.8.374-.8.122 0 .24-.055.318-.15l.393-.474c.196-.237.49-.368.797-.403.554-.065 1.407-.277 1.582-.973.185-.731-.986-.944-.998-1.62A7 7 0 0 0 8 1m.524 8.963a.413.413 0 1 0-.783-.183v.028a.46.46 0 0 1-.137.326l-.113.107a.36.36 0 0 0 .5.518l.193-.187a.6.6 0 0 0 .12-.166zm3.374-4.444c-.252-.244-.681-.139-.931.107-.256.251-.578.406-.918.585-.338.177-.264.625.101.735a.48.48 0 0 0 .345-.027l1.278-.617a.484.484 0 0 0 .125-.783" />
+                            </svg>
+                        </a>
+                        <a href="https://github.com/prathmesh796/chess-agent" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-github" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                            </svg>
+                        </a>
+                    </div>
+                </figure>
+
+                <figure class="projects-figure" data-category="paper">
+                    <figcaption class="projects-caption">
+                        <h2>Alexnet</h2>
+                        <p>An ImageNet classification with Deep Convolutional Neural Networks.</p>
+                    </figcaption>
+
+                    <div class="project-links">
+                        <a href="https://www.kaggle.com/code/prthmeshsalunkhe/alexnext" target="_blank">
+                            <img src="/img/kaggle-custom.svg" alt="Kaggle" width="24" height="24">
+                        </a>
+                        <a href="https://github.com/prathmesh796/mldl-papers/tree/main/Alexnet" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-github" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                            </svg>
+                        </a>
+                    </div>
+                </figure>
+    
+                <figure class="projects-figure" data-category="main">
+                    <figcaption class="projects-caption">
+                        <h2>Chessmate</h2>
+                        <p>A platform for analyzing and learning your chess games played on chess.com.</p>
+                    </figcaption>
 
                     <div class="project-links">
                         <a href="https://chessmate-theta.vercel.app/" target="_blank">
@@ -131,15 +186,13 @@
                             </svg>
                         </a>
                     </div>
-                </figcaption>
-            </figure>
-
-            <figure class="projects-figure">
-                <img src="/img/getLancer-portfolio-banner.png" alt="Project Title" width="300" height="200"
-                    class="projects-image">
-                <figcaption class="projects-caption">
-                    <h2>getLancer</h2>
-                    <p>A platform for finding jobs and connecting freelancers with clients for various projects.</p>
+                </figure>
+    
+                <figure class="projects-figure" data-category="main">
+                    <figcaption class="projects-caption">
+                        <h2>getLancer</h2>
+                        <p>A platform for finding jobs and connecting freelancers with clients for various projects.</p>
+                    </figcaption>
 
                     <div class="project-links">
                         <a href="https://getlancer.vercel.app/" target="_blank">
@@ -157,23 +210,21 @@
                             </svg>
                         </a>
                     </div>
-                </figcaption>
-            </figure>
-
-            <figure class="projects-figure">
-                <img src="/img/chatbot-portfolio-banner.png" alt="Project Title" width="300" height="200"
-                    class="projects-image">
-                <figcaption class="projects-caption">
-                    <h2>Admission Enquiry Chatbot</h2>
-                    <p>A chatbot designed to assist students with admission process of an university.</p>
+                </figure>
+    
+                <figure class="projects-figure" data-category="main">
+                    <figcaption class="projects-caption">
+                        <h2>Admission Enquiry Chatbot</h2>
+                        <p>A chatbot designed to assist students with admission process of an university.</p>
+                    </figcaption>
 
                     <div class="project-links">
-                        <a href="" target="_blank">
-                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        <a href="" target="_blank" class="deployment-links-disabled">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                                 class="bi bi-globe-asia-australia-fill" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd"
                                     d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0m3.041 9a1 1 0 0 0-.946.674l-.172.499a1 1 0 0 1-.403.515l-.803.517a1 1 0 0 0-.458.84v.455a1 1 0 0 0 1 1h.257c.192 0 .38.055.542.16l.762.491a1 1 0 0 0 .282.123A7 7 0 0 0 14.82 9.57a1 1 0 0 0-.085-.061l-.315-.204a1 1 0 0 0-.977-.06l-.169.082a1 1 0 0 1-.742.051l-1.02-.33A1 1 0 0 0 11.205 9zm-5.832 2.655a.302.302 0 1 0-.298.52l.762.325.48.232A.386.386 0 1 0 6.321 12h-.417a.7.7 0 0 1-.418-.139zM8 1a7 7 0 0 0-6.387 9.864l.754-1.285a1 1 0 0 1 1.546-.225l1.074 1.005a.986.986 0 0 0 1.36-.011l.038-.037a.88.88 0 0 0 .26-.754c-.075-.549.37-1.035.92-1.1.728-.086 1.587-.324 1.728-.957.086-.386-.115-.83-.361-1.2-.208-.312 0-.8.374-.8.122 0 .24-.055.318-.15l.393-.474c.196-.237.49-.368.797-.403.554-.065 1.407-.277 1.582-.973.185-.731-.986-.944-.998-1.62A7 7 0 0 0 8 1m.524 8.963a.413.413 0 1 0-.783-.183v.028a.46.46 0 0 1-.137.326l-.113.107a.36.36 0 0 0 .5.518l.193-.187a.6.6 0 0 0 .12-.166zm3.374-4.444c-.252-.244-.681-.139-.931.107-.256.251-.578.406-.918.585-.338.177-.264.625.101.735a.48.48 0 0 0 .345-.027l1.278-.617a.484.484 0 0 0 .125-.783" />
-                            </svg> -->
+                            </svg>
                         </a>
                         <a href="https://github.com/prathmesh796/Admission_Enquiry_Chatbot" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
@@ -183,18 +234,16 @@
                             </svg>
                         </a>
                     </div>
-                </figcaption>
-            </figure>
-
-            <figure class="projects-figure">
-                <img src="/img/chatbot-portfolio-banner.png" alt="Project Title" width="300" height="200"
-                    class="projects-image">
-                <figcaption class="projects-caption">
-                    <h2>Exceller</h2>
-                    <p>A tool which can summarize your excel sheets.</p>
+                </figure>
+    
+                <figure class="projects-figure" data-category="main">
+                    <figcaption class="projects-caption">
+                        <h2>Exceller</h2>
+                        <p>A tool which can summarize your excel sheets.</p>
+                    </figcaption>
 
                     <div class="project-links">
-                        <a href="" target="_blank">
+                        <a href="" target="_blank" class="deployment-links-disabled">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                                 class="bi bi-globe-asia-australia-fill" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd"
@@ -209,8 +258,32 @@
                             </svg>
                         </a>
                     </div>
-                </figcaption>
-            </figure>
+                </figure>
+
+                <figure class="projects-figure" data-category="side">
+                    <figcaption class="projects-caption">
+                        <h2>RAG-chatbot</h2>
+                        <p>A RAG chatbot for an ecommerce platfrom.</p>
+                    </figcaption>
+
+                    <div class="project-links">
+                        <a href="" target="_blank" class="deployment-links-disabled">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-globe-asia-australia-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0m3.041 9a1 1 0 0 0-.946.674l-.172.499a1 1 0 0 1-.403.515l-.803.517a1 1 0 0 0-.458.84v.455a1 1 0 0 0 1 1h.257c.192 0 .38.055.542.16l.762.491a1 1 0 0 0 .282.123A7 7 0 0 0 14.82 9.57a1 1 0 0 0-.085-.061l-.315-.204a1 1 0 0 0-.977-.06l-.169.082a1 1 0 0 1-.742.051l-1.02-.33A1 1 0 0 0 11.205 9zm-5.832 2.655a.302.302 0 1 0-.298.52l.762.325.48.232A.386.386 0 1 0 6.321 12h-.417a.7.7 0 0 1-.418-.139zM8 1a7 7 0 0 0-6.387 9.864l.754-1.285a1 1 0 0 1 1.546-.225l1.074 1.005a.986.986 0 0 0 1.36-.011l.038-.037a.88.88 0 0 0 .26-.754c-.075-.549.37-1.035.92-1.1.728-.086 1.587-.324 1.728-.957.086-.386-.115-.83-.361-1.2-.208-.312 0-.8.374-.8.122 0 .24-.055.318-.15l.393-.474c.196-.237.49-.368.797-.403.554-.065 1.407-.277 1.582-.973.185-.731-.986-.944-.998-1.62A7 7 0 0 0 8 1m.524 8.963a.413.413 0 1 0-.783-.183v.028a.46.46 0 0 1-.137.326l-.113.107a.36.36 0 0 0 .5.518l.193-.187a.6.6 0 0 0 .12-.166zm3.374-4.444c-.252-.244-.681-.139-.931.107-.256.251-.578.406-.918.585-.338.177-.264.625.101.735a.48.48 0 0 0 .345-.027l1.278-.617a.484.484 0 0 0 .125-.783" />
+                            </svg>
+                        </a>
+                        <a href="https://github.com/prathmesh796/chess-agent" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-github" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                            </svg>
+                        </a>
+                    </div>
+                </figure>
+            </div>
         </article>
     </main>
 
