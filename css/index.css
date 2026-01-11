@@ -103,16 +103,66 @@ body:has(#dark:target) li:hover {
   margin-bottom: 1.5rem;
 }
 
+.highlight-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.highlight-wrapper a {
+  position: relative;
+  display: inline-block;
+}
+
 .about-span {
   color: #f0c078;
   text-decoration: none;
   font-weight: 500;
+  position: relative;
+  z-index: 1;
 }
 
 .work-span {
   color: #c081e3;
   text-decoration: none;
   font-weight: 500;
+  position: relative;
+  z-index: 1;
+}
+
+/* Highlight animation */
+.highlight-path {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  animation: drawHighlight 2.5s ease-out forwards;
+}
+
+.highlight-path-1 {
+  animation-delay: 0.3s;
+}
+
+.highlight-path-2 {
+  animation-delay: 0.5s;
+}
+
+.highlight-path-3 {
+  animation-delay: 0.3s;
+}
+
+.highlight-path-4 {
+  animation-delay: 0.5s;
+}
+
+.highlight-path-5 {
+  animation-delay: 0.7s;
+}
+
+@keyframes drawHighlight {
+  from {
+    stroke-dashoffset: 200;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 .section h3 {
