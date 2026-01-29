@@ -3,8 +3,5 @@
 User-agent: *
 Allow: /
 
-# Disallow dark mode hash URLs
-Disallow: /*#dark
-
 # Sitemap location
 Sitemap: https://prathmesh796.github.io/sitemap.xml

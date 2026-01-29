@@ -60,19 +60,26 @@ ul {
   gap: 2rem;
 }
 
-.ul-list a li {
+.ul-list li {
+  border-radius: 10px;
+}
+
+.ul-list li a {
+  display: block;
   padding: 0.5rem 1rem;
   transition: background-color 0.4s, color 0.4s;
   border-radius: 10px;
 }
 
-.ul-list a li:hover {
+.ul-list li:hover a,
+.ul-list li a:hover {
   background-color: #e0e0e0;
   color: #000;
   cursor: pointer;
 }
 
-body:has(#dark:target) li:hover {
+body:has(#dark:target) .ul-list li:hover a,
+body:has(#dark:target) .ul-list li a:hover {
   background-color: #484848;
   color: white;
   cursor: pointer;
@@ -165,7 +172,7 @@ body:has(#dark:target) li:hover {
   }
 }
 
-.section h3 {
+.section h2.section-subtitle {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
