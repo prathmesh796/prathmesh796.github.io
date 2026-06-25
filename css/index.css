@@ -46,13 +46,19 @@ ul {
 /* Header and Navbar */
 .header {
   padding: 1rem 2rem;
-  margin-right: 10rem;
+  margin-right: 5%;
 }
 
 .navbar {
   display: flex;
   justify-content: right;
   align-items: center;
+  gap: 2rem;
+}
+
+.nav-buttons{
+  display: flex;
+  gap: 2rem;
 }
 
 .ul-list {
@@ -87,12 +93,13 @@ body:has(#dark:target) .ul-list li a:hover {
 
 /* Main Layout */
 .main-content {
-  height: 75vh; /* Full screen height */
+  min-height: 75vh; /* Full screen height */
   display: flex;
   justify-content: flex-start; /* Align content to left */
   align-items: flex-end; /* Align content to bottom */
   padding: 2rem;
-  margin-left: 150px;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .section {
@@ -236,19 +243,63 @@ body:not(:has(#dark:target)) .nav-dark {
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+  .main-content {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+}
+
 @media (max-width: 768px) {
+  .header {
+    padding: 1rem;
+  }
+
   .main-content {
     flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .section h1 {
+    font-size: 2.5rem;
+  }
+
+  .section p {
+    font-size: 1.1rem;
   }
 
   .ul-list {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
   }
 
   .navbar {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .github-button {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .social-links {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .section h1 {
+    font-size: 2rem;
+  }
+
+  .ul-list {
+    gap: 0.25rem;
   }
 }
