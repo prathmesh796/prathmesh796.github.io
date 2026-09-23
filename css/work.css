@@ -1,4 +1,4 @@
-.main-content-projects {
+.main-content-work {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -22,7 +22,7 @@
 }
 
 /* Aside sidebar */
-.projects-aside {
+.work-aside {
     width: 250px;
     min-width: 250px;
     padding: 20px;
@@ -68,7 +68,7 @@
 }
 
 /* Dark mode styles for aside */
-body:has(#dark:target) .projects-aside {
+body:has(#dark:target) .work-aside {
     background-color: #121212;
 }
 
@@ -88,25 +88,26 @@ body:has(#dark:target) .category-btn.active {
     font: bold;
 }
 
-.projects-article {
+.work-article {
     width: 100%;
     padding: 20px;
     display: flex;
     gap: 30px;
 }
 
-.projects-container {
+.work-container {
     display: flex;
     flex-direction: column;
     gap: 20px;
     overflow: hidden;
     padding-right: 20px;
     padding-top: 2px;
+    margin-left: 100px;
 }
 
-.projects-figure {
+.work-item {
     display: flex;
-    text-align: center;
+    text-align: left;
     justify-content: space-between;
     width: 100%;
     height: fit-content;
@@ -116,31 +117,25 @@ body:has(#dark:target) .category-btn.active {
     padding-bottom: 16px;
 }
 
-.projects-figure:hover {
-    transform: translateY(-2px);
-    background-color: #e0e0e0;
-    transition: all 0.2;
-}
-
-body:has(#dark:target) .projects-figure:hover {
+body:has(#dark:target) .work-figure:hover {
     background-color: #2a2a2a;
     color: white;
 }
 
-.projects-caption {
+.work-caption {
     margin-top: 10px;
     flex: 1;
     min-width: 0;
 }
 
-.projects-caption h2 {
+.work-caption h2 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
     text-align: left;
     padding-left: 25px;
 }
 
-.projects-caption em {
+.work-caption em {
     font-size: 0.8rem;
     display: flex;
     align-items: center;
@@ -150,42 +145,45 @@ body:has(#dark:target) .projects-figure:hover {
     text-align: left;
 }
 
-.projects-caption p {
+.work-caption p {
     font-size: 1rem;
     color: #555;
     padding-left: 25px;
     text-align: left;
 }
 
-body:has(#dark:target) .projects-caption p {
+.work-description {
+    font-size: 0.8rem;
+    color: #555;
+    padding-left: 25px;
+    text-align: left;
+}
+
+body:has(#dark:target) .work-caption p {
     color: #ccc;
 }
 
-.projects-header {
+.work-header {
     font-size: 1.5rem;
     margin-bottom: 1rem;
     margin-top: 1rem;
 }
 
-.project-links {
-    display: flex;
-    justify-content: flex-end;
-    gap: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding-left: 25px;
-    padding-right: 25px;
-    flex-shrink: 0;
+.vertical-line {
+    width: 2px;
+    height: 100%;
+    background-color: #ccc;
+    margin: 0 20px;
 }
 
-.project-links a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.deployment-links-disabled {
-    pointer-events: none;
-    opacity: 0.1;
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #555;
+    border-radius: 50%;
+    margin-left: -4px;
+    margin-top: 10px;
+    z-index: 1;
 }
 
 @keyframes fadeIn {
@@ -202,26 +200,26 @@ body:has(#dark:target) .projects-caption p {
 
 /* Responsive design */
 @media (max-width: 1024px) {
-    .main-content-projects {
+    .main-content-work {
         margin-left: 2%;
         margin-right: 2%;
     }
 }
 
 @media (max-width: 768px) {
-    .main-content-projects {
+    .main-content-work {
         padding: 1rem;
         margin-left: 0;
         margin-right: 0;
     }
     
-    .projects-article {
+    .work-article {
         flex-direction: column;
         padding: 10px;
         gap: 20px;
     }
 
-    .projects-aside {
+    .work-aside {
         width: 100%;
         position: relative;
         top: 0;
@@ -243,17 +241,17 @@ body:has(#dark:target) .projects-caption p {
         padding: 8px 12px;
     }
 
-    .projects-figure {
+    .work-figure {
         flex-direction: column;
         align-items: flex-start;
         padding: 10px;
     }
     
-    .projects-caption h2 {
+    .work-caption h2 {
         padding-left: 10px;
     }
     
-    .projects-caption p {
+    .work-caption p {
         padding-left: 10px;
     }
 
@@ -264,7 +262,8 @@ body:has(#dark:target) .projects-caption p {
         justify-content: flex-end;
     }
     
-    .projects-container {
+    .work-container {
         padding-right: 0;
     }
 }
+

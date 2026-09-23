@@ -2,6 +2,15 @@
 <html lang="en">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S27FGNPM1L"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-S27FGNPM1L');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
@@ -58,7 +67,10 @@
                     <a href="/pages/projects.html">Projects</a>
                 </li>
                 <li>
-                    <a href="/pages/blogs.html">Blog</a>
+                    <a href="/pages/work.html">Work</a>
+                </li>
+                <li>
+                    <a href="/pages/blogs.html">Blogs</a>
                 </li>
                 <li>
                     <a href="/pages/about.html">About</a>
@@ -72,7 +84,10 @@
                     <a href="/pages/projects.html#dark">Projects</a>
                 </li>
                 <li>
-                    <a href="/pages/blogs.html#dark">Blog</a>
+                    <a href="/pages/work.html#dark">Work</a>
+                </li>
+                <li>
+                    <a href="/pages/blogs.html#dark">Blogs</a>
                 </li>
                 <li>
                     <a href="/pages/about.html#dark">About</a>
@@ -132,6 +147,7 @@
                 <figure class="projects-figure" data-category="main">
                     <figcaption class="projects-caption">
                         <h2>Chess.rl</h2>
+                        <em>Next.js, Tailwind CSS, TypeScript, Python, Reinforcement Learning, Stockfish</em>
                         <p>A reinforcement learning agent which can play chess against a human.</p>
                     </figcaption>
 
@@ -156,6 +172,7 @@
                 <figure class="projects-figure" data-category="main">
                     <figcaption class="projects-caption">
                         <h2>Locally</h2>
+                        <em>Python, LangChain, Groq</em>
                         <p>AI-powered CLI tool that automatically clones any GitHub repository and sets it up on your
                             local machine — no manual configuration needed.</p>
                     </figcaption>
@@ -181,6 +198,7 @@
                 <figure class="projects-figure" data-category="main">
                     <figcaption class="projects-caption">
                         <h2>Skills At Home</h2>
+                        <em>Next.js, Tailwind CSS, TypeScript, React Native, PostgreSQL, Prisma</em>
                         <p>A platform for learning and practicing vocational skills at home, supported by LAHI
                             Foundation.</p>
                     </figcaption>
@@ -206,6 +224,7 @@
                 <figure class="projects-figure" data-category="side">
                     <figcaption class="projects-caption">
                         <h2>Disggle</h2>
+                        <em>Python, RPC, Discord.py</em>
                         <p>A Discord presence app for kaggle.</p>
                     </figcaption>
 
@@ -230,6 +249,7 @@
                 <figure class="projects-figure" data-category="paper">
                     <figcaption class="projects-caption">
                         <h2>Alexnet</h2>
+                        <em>Python, PyTorch, CNN, ImageNet</em>
                         <p>An ImageNet classification with Deep Convolutional Neural Networks.</p>
                     </figcaption>
 
@@ -249,9 +269,34 @@
                     </div>
                 </figure>
 
+                <figure class="projects-figure" data-category="paper">
+                    <figcaption class="projects-caption">
+                        <h2>Attention is all you need</h2>
+                        <em>Python, PyTorch, Transformers</em>
+                        <p>A PyTorch implementation of the Attention is all you need paper.</p>
+                    </figcaption>
+
+                    <div class="project-links">
+                        <a href="https://www.kaggle.com/code/prthmeshsalunkhe/building-the-transformer-from-scratch"
+                            target="_blank" aria-label="View Alexnet implementation on Kaggle">
+                            <img src="/img/kaggle-custom.svg" alt="Kaggle icon - View Alexnet paper implementation"
+                                width="24" height="24">
+                        </a>
+                        <a href="https://github.com/prathmesh796/ml-papers/tree/main/Attention%20is%20all%20you%20need"
+                            target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-github" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                            </svg>
+                        </a>
+                    </div>
+                </figure>
+
                 <figure class="projects-figure" data-category="main">
                     <figcaption class="projects-caption">
                         <h2>Chessmate</h2>
+                        <em>Next.js, Tailwind CSS, TypeScript, Chess.js, Stockfish</em>
                         <p>A platform for analyzing and learning your chess games played on chess.com.</p>
                     </figcaption>
 
@@ -276,6 +321,7 @@
                 <figure class="projects-figure" data-category="main">
                     <figcaption class="projects-caption">
                         <h2>getLancer</h2>
+                        <em>Next.js, Tailwind CSS, TypeScript, MongoDB, Firestore</em>
                         <p>A platform for finding jobs and connecting freelancers with clients for various projects.</p>
                     </figcaption>
 
@@ -300,6 +346,7 @@
                 <figure class="projects-figure" data-category="main">
                     <figcaption class="projects-caption">
                         <h2>Admission Enquiry Chatbot</h2>
+                        <em>Python, Tensorflow, GeminiAPI, Flask</em>
                         <p>A chatbot designed to assist students with admission process of an university.</p>
                     </figcaption>
 
@@ -324,6 +371,8 @@
                 <figure class="projects-figure" data-category="side">
                     <figcaption class="projects-caption">
                         <h2>Exceller</h2>
+                        <em>Python, Generative AI, Pandas, Flask</em>
+
                         <p>A tool which can summarize your excel sheets.</p>
                     </figcaption>
 
@@ -348,6 +397,7 @@
                 <figure class="projects-figure" data-category="side">
                     <figcaption class="projects-caption">
                         <h2>RAG-chatbot</h2>
+                        <em>Python, LangChain, RAG, Chromadb</em>
                         <p>A RAG chatbot for an ecommerce platfrom.</p>
                     </figcaption>
 

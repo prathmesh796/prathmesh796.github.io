@@ -69,6 +69,23 @@
     font-size: 1rem;
 }
 
+.edu-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.edu-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-left: 2px solid #ccc;
+    position: relative;
+}
+
+.edu-caption {
+    margin-bottom: 5px;
+}
+
 body:has(#dark:target) .skills-list li {
     background-color: #484848;
     color: white;
